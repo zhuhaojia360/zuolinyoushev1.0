@@ -1,0 +1,210 @@
+/* pages/booking/cleanup/cleanup.wxss */
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6rpx 6rpx;
+  box-sizing: border-box;
+} 
+
+.page-body {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  flex-wrap: nowrap;
+}
+
+.picker-body {
+  display: flex;
+  flex-direction: row;
+}
+
+.picker{
+  background-color: white;
+  height:18pt;
+  width: 100px;
+  border-radius: 8px;
+  padding:6px;
+  margin-bottom: 10px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.picker_date{
+  background-color: white;
+  height:22pt;
+  width: 140pt;
+  border-radius: 8px;
+  padding:6px;
+  margin-bottom: 10px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.picker_time{
+  background-color: white;
+  height:22pt;
+  width: 40pt;
+  border-radius: 8px;
+  padding:6px;
+  margin: 0pt 0pt 0pt 10pt;
+  margin-bottom: 10px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+
+.swiper{
+    width:100%;
+    margin:0rpx;
+    z-index: -1;
+    position: relative;
+}
+
+.swiper image{
+    display: inline;
+}
+
+.wrap{
+	display: inline-block;
+	margin-top: .8rem;
+}
+
+.booking{
+  width: 100%;
+  height: 900rpx;
+  align-items: center;
+  justify-content: center;
+  /*flex-direction: column;*/
+  padding: 100rpx 0rpx 200rpx 0rpx;
+  background-color: #BDE0BF;
+  display:flex;
+  position: fixed;
+}
+
+.input_class{
+  background-color: white;
+  height:24pt;
+  width: 200pt;
+  border-radius: 8px;
+  padding:6px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.checkbox{
+  background-color: white;
+  height:100pt;
+  width: 200pt;
+  font-size: 14pt;
+  border-radius: 8px;
+  padding:6px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.input_village{
+  background-color: white;
+  height:24pt;
+  width: 200pt;
+  border-radius: 8px;
+  font-size: 12pt;
+  padding:6px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.picker_region{
+  background-color: white;
+  height:24pt;
+  width: 200pt;
+  border-radius: 8px;
+  padding:6px;
+  text-align: center;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.picker_serv{
+  background-color: white;
+  height:24pt;
+  width: 200pt;
+  border-radius: 8px;
+  padding:6px;
+  text-align: center;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+
+.button{
+  margin-top: 10px;
+}
+
+.date_time_class{
+  background-color: white;
+  border-radius: 8px;
+  padding:8px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+/*
+* checkbox wxss
+*/
+.flex{
+  flex-direction: row;
+}
+.flex .item{
+  flex: 1
+}
+ 
+.service_selection {
+  padding: 15px 10px;
+  background: #fff;
+}
+ 
+.service_selection label {
+  background: #f0f1ec;
+  padding: 6px 7px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+ 
+.service_selection .is_checked {
+  border: 1px solid #fe0002;
+  color: #fe0002;
+  background: #fff;
+}
+
+
+
+.flex{
+  flex-direction: row;
+}
+.flex .item{
+  flex: 1
+}
+ 
+.service_selection {
+  padding: 15px 10px;
+  background: #fff;
+}
+ 
+.service_selection label {
+  background: #f0f1ec;
+  padding: 6px 7px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+ 
+.service_selection .is_checked {
+  border: 1px solid #fe0002;
+  color: #fe0002;
+  background: #fff;
+}

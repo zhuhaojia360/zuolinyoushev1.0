@@ -1,0 +1,43 @@
+<!--pages/booking/sweepup/sweepup.wxml-->
+<loading hidden="{{!loading}}">
+  {{title}}
+</loading>
+
+<view class='booking'>
+  <form bindsubmit='onSubmitClick'>
+
+    <view class="picker-body" scroll-x='true'>
+      <view class='picker_date'>
+        <picker mode='date' value='{{date}}' start='2018-06-06' end='2019-06-06' bindchange='bindDateChange'>{{date}}</picker>
+      </view>
+      <view class='picker_time'>
+        <picker mode='time' value='{{time}}' start='7:00' end='17:00' bindchange='bindTimeChange'>
+          {{time}}
+        </picker>
+      </view>
+    </view>
+
+    <view class="picker_serv">
+      <picker bindchange="bindServiceChange" value="{{index}}" range="{{array}}">
+        <view>
+          {{array[index]}}
+        </view>
+      </picker>
+    </view>
+
+    <view class="picker_region">
+      <picker mode='region' bindchange='bindRegionChange' value='{{region}}' custom-item='{{customItem}}'>
+        {{region[0]}}，{{region[1]}}，{{region[2]}}
+      </picker>
+    </view>
+
+    <textarea class='input_village' name='village' auto-height='true' placeholder='哪个小区，几栋，几单元，几零几' value='{{village}}'></textarea>
+    <textarea class='input_class' name='area' auto-height='true' placeholder='房屋建筑面积' value='{{carea}}'></textarea>
+
+<textarea class='input_class' name='note' auto-height='true' placeholder='其他说明' value='{{cnote}}'></textarea>
+
+    <textarea class='input_class' name='phone' type='number' auto-height='true' placeholder='您的电话号码或微信' value='{{cphone}}'></textarea>
+
+    <button type='primary' class='button' form-type='submit'>马上预约</button>
+  </form>
+</view>

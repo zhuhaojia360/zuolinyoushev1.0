@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/booking/booking",
+    "pages/order/order",
+    "pages/user/user",
+    "pages/mall/mall",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/booking/cleanup/cleanup",
+    "pages/booking/sweepup/sweepup",
+    "pages/booking/dredge/dredge",
+    "pages/booking/babysitter/babysitter",
+    "pages/booking/nanny/nanny",
+    "pages/booking/appliance/appliance",
+    "pages/chat/chat"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#51c332",
+    "navigationBarTitleText": "左邻右舍",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#d24a58",
+    "backgroundColor": "#f6f6f7",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/booking/booking",
+        "text": "预约",
+        "iconPath": "images/booking.png",
+        "selectedIconPath": "images/booking_active.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "images/order.png",
+        "selectedIconPath": "images/order_active.png"
+      },
+      {
+        "pagePath": "pages/mall/mall",
+        "text": "商城",
+        "iconPath": "images/mall.png",
+        "selectedIconPath": "images/mall_active.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user_active.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 60000,
+    "connectSocket": 60000,
+    "uploadFile": 60000,
+    "downloadFile": 60000
+  },
+  "debug": true
+}

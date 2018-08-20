@@ -1,0 +1,58 @@
+<!--pages/booking/booking.wxml-->
+<loading hidden="{{!loading}}">
+  {{title}}
+</loading>
+
+<view class="container">
+  <scroll-view class="page-body" scroll-x="{{scroll_x}}" bindscrolltolower="loadMore">
+    <!--banner-->
+    <!--状态滚动-->
+    <view class="swiper">
+      <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for-items="{{banner_url}}" wx:key="item.id">
+          <swiper-item>
+            <block wx:if="{{item}}">
+              <image src="{{item}}" mode="aspectFill" />
+            </block>
+            <block wx:else>
+              <image src="{{default_pic}}" mode="aspectFill"></image>
+            </block>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </scroll-view>
+</view>
+
+<view class='booking'>
+  <form>
+
+    <view class="picker-body" scroll-x='true'>
+      <view class='picker_date'>
+        <picker mode='date' value='{{date}}' start='2018-06-6' end='2019-06-06' bindchange='bindDateChange'>{{date}}</picker>
+      </view>
+      <view class='picker_time'>
+        <picker mode='time' value='{{time}}' start='7:00' end='17:00' bindchange='bindTimeChange'>
+          {{time}}
+        </picker>
+      </view>
+    </view>
+
+    <!--view class="picker_region">
+      <picker mode='region' bindchange='bindRegionChange' value='{{region}}' custom-item='{{customItem}}'>
+        {{region[0]}}，{{region[1]}}，{{region[2]}}
+      </picker>
+    </view-->
+    
+    <view class="picker_serv">
+      <picker bindchange="bindServiceChange" value="{{index}}" range="{{array}}">
+        <view>
+          {{array[index]}}
+        </view>
+      </picker>
+    </view>
+    <view>
+    <button type='primary' class='button' bindtap='bookingServ' data-date='{{date}}' data-time='{{time}}' data-index='{{index}}'>马上预约</button>
+    </view>
+  </form>
+</view>
