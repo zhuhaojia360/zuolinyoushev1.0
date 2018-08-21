@@ -31,24 +31,13 @@
       </picker>
     </view>
 
-    <textarea class='input_village' name='village' auto-height='true' placeholder='哪个小区，几栋，几单元，几零几' value='{{village}}'></textarea>
+    <textarea class='input_village' name='village' auto-height='true' placeholder='小区/栋/单元/门牌号' value='{{village}}'></textarea>
     <textarea class='input_class' name='area' auto-height='true' placeholder='房屋建筑面积' value='{{carea}}'></textarea>
-    
-    <checkbox-group bindchange="checkboxChange">
-      <!--view class='service_selection'-->
-      <view class='checkbox'>
-      <!--label class="checkbox {{item.checked?'is_checked':''}}" wx:for="{{items}}"-->
-      <label wx:for="{{items}}">
-        <checkbox value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
-      </label>
-      </view>
-    </checkbox-group>
 
     <checkbox-group bindchange="serviceValChange">
         <view class="service_selection flex">
-          <block wx:for="{{allGoodsFilte}}">
-            <view class=" item">
- 
+          <block wx:for="{{items}}">
+            <view class="item">
               <label class="checkbox {{item.checked?'is_checked':''}}">
                 <checkbox value="{{item.value}}" checked="{{item.checked}}" hidden="false" />{{item.name}}
               </label>

@@ -13,22 +13,15 @@ Page({
    */
   data: {
     items: [
-      { name: '1', value: '擦玻璃' , checked: false },
-      { name: '2', value: '擦油烟机表面', checked: false },
-      { name: '3', value: '专业除螨', checked: false },
-      { name: '4', value: '擦冰箱内部', checked: false },
-      { name: '5', value: '擦柜子内部', checked: false },
-      { name: '6', value: '84消毒', checked: false },
-      { name: '7', value: '高温蒸汽消毒', checked: false },
-      { name: '8', value: '机洗窗帘', checked: false },
-      { name: '9', value: '拆洗沙发套', checked: false }
-    ],
-    allGoodsFilte: [
-      { name: '专人配送', value: '0', checked: true },
-      { name: '精品品牌', value: '1', checked: false },
-      { name: '超值优惠', value: '2', checked: false },
-      { name: '门店自提', value: '3', checked: false },
-      { name: '最快三小时', value: '4', checked: false },
+      { name: '擦玻璃', value: '0' , checked: true },
+      { name: '擦油烟机表面', value: '1', checked: false },
+      { name: '专业除螨', value: '2', checked: false },
+      { name: '擦冰箱内部', value: '3', checked: false },
+      { name: '擦柜子内部', value: '4', checked: false },
+      { name: '84消毒', value: '5', checked: false },
+      { name: '高温蒸汽消毒', value: '6', checked: false },
+      { name: '机洗窗帘', value: '7', checked: false },
+      { name: '拆洗沙发套', value: '8', checked: false }
     ],
     scroll_x: true,
     indicatorDots: true,
@@ -67,33 +60,20 @@ Page({
       index: e.detail.value
     })
   },
-  checkboxChange: function (e) {
-    console.log('checkbox发生change事件，携带value值为：', e.detail.value)
-    /*var items = this.data.items;
-    var checkItems = e.detail.value;
-    for(var i=0; i<items.length; i++){
-      if(checkItems.indexOf(i)!=-1){
-        items[i].checked=true;
-      }else{
-        items[i].checked=false;
-      }
-    }
-    this.setData({
-      items:items
-    })*/
-  },
+  
   serviceValChange: function (e) {
-    var allGoodsFilte = this.data.allGoodsFilte;
+    console.log('checkbox发生change事件，携带value值为：', e.detail.value)
+    var items = this.data.items;
     var checkArr = e.detail.value;
-    for (var i = 0; i < allGoodsFilte.length; i++) {
+    for (var i = 0; i < items.length; i++) {
       if (checkArr.indexOf(i + "") != -1) {
-        allGoodsFilte[i].checked = true;
+        items[i].checked = true;
       } else {
-        allGoodsFilte[i].checked = false;
+        items[i].checked = false;
       }
     }
     this.setData({
-      allGoodsFilte: allGoodsFilte
+      items: items
     })
   },
 
